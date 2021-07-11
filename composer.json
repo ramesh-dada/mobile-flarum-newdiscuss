@@ -1,0 +1,34 @@
+{
+    "name": "ramesh-dada/mobile-flarum-newdiscuss",
+    "description": "Move mobile new discussion button to Homepage",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "proprietary",
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "RameshDada",
+            "homepage": "https://discuss.flarum.org/u/1Dot",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ramesh-dada/mobile-flarum-newdiscuss/issues",
+        "source": "https://github.com/ramesh-dada/mobile-flarum-newdiscuss"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Mobile New Discussion on Homepage",
+            "category": "theme",
+            "icon": {
+                "name": "fas fa-edit",
+                "backgroundColor": "#684ba6",
+                "color": "#fff"
+            }
+        }
+    }
+}
