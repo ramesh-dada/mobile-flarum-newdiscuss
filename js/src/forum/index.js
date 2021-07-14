@@ -3,7 +3,7 @@ import app from 'flarum/forum/app';
 import IndexPage from 'flarum/forum/components/IndexPage';
 import Button from 'flarum/common/components/Button';
 
-/* global m */
+/* Super Ultra Pro RameshDADA Premium 1Dot */
 
 app.initializers.add('ramesh-dada-mobile-flarum-newdiscuss', () => {
     extend(IndexPage.prototype, 'viewItems', function (items) {
@@ -23,7 +23,7 @@ app.initializers.add('ramesh-dada-mobile-flarum-newdiscuss', () => {
           disabled: !canStartDiscussion,
         },
         app.translator.trans(canStartDiscussion ? 'core.forum.index.start_discussion_button' : 'core.forum.index.cannot_start_discussion_button')
-      )
-    );
+    )
+    -100);
     });
 });
