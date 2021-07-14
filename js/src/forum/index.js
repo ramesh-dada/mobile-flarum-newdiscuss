@@ -23,7 +23,7 @@ app.initializers.add('ramesh-dada-mobile-flarum-newdiscuss', () => {
           disabled: !canStartDiscussion,
         },
         app.translator.trans(canStartDiscussion ? 'core.forum.index.start_discussion_button' : 'core.forum.index.cannot_start_discussion_button')
-    )
-    -100);
+      )
+    );
     });
 });
