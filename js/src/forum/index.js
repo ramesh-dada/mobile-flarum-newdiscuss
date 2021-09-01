@@ -8,18 +8,7 @@ import searchmodal from './searchmodal';
 
 app.initializers.add('ramesh-dada-mobile-flarum-newdiscuss', () => {
   extend(IndexPage.prototype, 'sidebarItems', (items) => {
-    const tag = this.currentTag();
-    if (tag) {
-      const color = tag.color();
-      const canStartDiscussion = tag.canStartDiscussion() || !app.session.user;
 
-      if (color) {
-        items.get('newDiscussion').attrs.style = { backgroundColor: color };
-      }
-
-      items.get('newDiscussion').attrs.disabled = !canStartDiscussion;
-      items.get('newDiscussion').children = app.translator.trans(canStartDiscussion ? 'core.forum.index.start_discussion_button' : 'core.forum.index.cannot_start_discussion_button');
-    }
     const canStartDiscussion = app.forum.attribute('canStartDiscussion') || !app.session.user;
     items.add('newDiscussion',
       Button.component(
