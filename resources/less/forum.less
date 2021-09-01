@@ -1,33 +1,24 @@
 @media (min-width: 767px) {
-  .DadaDiscuss {
+  .DadaDiscuss, .SearchDada {
     display: none !important;
   }
 }
-@media screen and (max-width: 345px) {
-.DadaDiscuss {
-    padding-top: 3px;
-  }
-}
 @media (max-width: 767px) {
-      .IndexPage-toolbar {
-        display: flex;
-
-        .IndexPage-toolbar-view {
-            flex: 1;
-            display: flex;
-            flex-wrap: wrap;
-
-            .DadaDiscuss {
-                flex: 1;
-
-                .Button {
-                    width: 100%;
-                }
-            }
-        }
-
-        .IndexPage-toolbar-action {
-            display: flex;
-        }
-    }
+.DadaDiscuss, .SearchDada {
+    margin-top: 4px;
+    border-radius: 4px;
+}
+.DadaDiscuss {
+  margin-right: 5px;
+  width: 58%;
+}
+.SearchDada{
+  width: 40%;
+}
+.SearchDada::before{
+content: "\f002";
+font-family: 'Font Awesome 5 Free';
+font-weight: 700;
+padding-right: 4px;
+}
 }
