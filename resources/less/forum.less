@@ -3,31 +3,17 @@
     display: none !important;
   }
 }
-@media screen and (max-width: 345px) {
-.DadaDiscuss {
-    padding-top: 3px;
-  }
+.DadaDiscuss.item-mnewDiscussion {
+    display: flex;
+    padding-top: 7px;
 }
-@media (max-width: 767px) {
-      .IndexPage-toolbar {
-        display: flex;
-
-        .IndexPage-toolbar-view {
-            flex: 1;
-            display: flex;
-            flex-wrap: wrap;
-
-            .DadaDiscuss {
-                flex: 1;
-
-                .Button {
-                    width: 100%;
-                }
-            }
-        }
-
-        .IndexPage-toolbar-action {
-            display: flex;
-        }
-    }
+.DadaDiscuss .Button {
+ border-radius: 4px;
+ flex: 1;
+}
+.DadaDiscuss .Button .Button-label:before {
+    content: "\f303";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 700;
+    padding-right: 4px;
 }
