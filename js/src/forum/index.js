@@ -6,13 +6,13 @@ import Button from 'flarum/common/components/Button';
 /* Super Ultra Pro RameshDADA Premium 1Dot */
 
 app.initializers.add('ramesh-dada-mobile-flarum-newdiscuss', () => {
-  extend(IndexPage.prototype, 'viewItems', function (items) {
+  extend(IndexPage.prototype, 'sidebarItems', function (items) {
     const canStartDiscussion = app.forum.attribute('canStartDiscussion') || !app.session.user;
-    items.add('newDiscussion',
+    items.add('mnewDiscussion',
       Button.component(
         {
           icon: 'fas fa-edit',
-          className: 'Button Button--primary IndexPage-newDiscussion',
+          className: 'Button Button--primary mIndexPage-newDiscussion',
           itemClassName: 'DadaDiscuss',
           onclick: () => {
             // If the user is not logged in, the promise rejects, and a login modal shows up.
@@ -30,11 +30,11 @@ app.initializers.add('ramesh-dada-mobile-flarum-newdiscuss', () => {
       const canStartDiscussion = tag.canStartDiscussion() || !app.session.user;
 
       if (color) {
-        items.get('newDiscussion').attrs.style = { backgroundColor: color };
+        items.get('mnewDiscussion').attrs.style = { backgroundColor: color };
       }
 
-      items.get('newDiscussion').attrs.disabled = !canStartDiscussion;
-      items.get('newDiscussion').children = app.translator.trans(canStartDiscussion ? 'core.forum.index.start_discussion_button' : 'core.forum.index.cannot_start_discussion_button');
+      items.get('mnewDiscussion').attrs.disabled = !canStartDiscussion;
+      items.get('mnewDiscussion').children = app.translator.trans(canStartDiscussion ? 'core.forum.index.start_discussion_button' : 'core.forum.index.cannot_start_discussion_button');
     }
   });
 });
